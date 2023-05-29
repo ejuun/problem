@@ -1,10 +1,12 @@
 from collections import deque
-n = int(input())
+import sys
+
+n = int(sys.stdin.readline())
 stack = deque()
 ans = ''
 i = 1
 for _ in range(n):
-    num = int(input())
+    num = int(sys.stdin.readline())
 
     while i <= num:
         stack.append(i)
