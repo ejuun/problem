@@ -21,7 +21,8 @@ for _ in range(m):
     put, a, b = map(int, input().split())
 
     if put == 0:
-        union(a, b)
+        if find_set(a) != find_set(b):
+            union(a, b)
     else:
         if find_set(a) == find_set(b):
             print('YES')
